@@ -9,7 +9,7 @@ const router = express.Router()
 router.post('/', createTodoList ) //create
 router.get('/', getTodoList) //Read
 router.get('/:id',getTodoListById) //Read
-// router.put('/', ()=> {}) //update
+
 router.patch('/:id', updateTodoList) //update
 router.delete('/:id', deleteTodoList) //Delete
 

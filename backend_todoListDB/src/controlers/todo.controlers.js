@@ -3,6 +3,7 @@ import Todos from "../models/todos.models.js";
 import asyncHandler from "express-async-handler"
 
 // CRUD
+
 // Create
 export const createTodoList = asyncHandler(async(req, res, next) =>{
     const { title, content } = req.body
@@ -13,7 +14,7 @@ export const createTodoList = asyncHandler(async(req, res, next) =>{
     }
 
     const todoList = await Todos.create({title, content})
-    res.status(200).json(todoList)
+    res.status(201).json(todoList)
 })
 
 // ReadAll
@@ -21,6 +22,7 @@ export const getTodoList = asyncHandler(async(req, res, next) => {
     const todoList = await Todos.find().exec()
     res.status(200).json(todoList)
 })
+
 
 // ReadOne
 export const getTodoListById = asyncHandler(async(req, res, next) =>{
@@ -38,6 +40,7 @@ export const getTodoListById = asyncHandler(async(req, res, next) =>{
 
     res.status(200).json(todoList)
 })
+
 
 // Update
 export const updateTodoList = asyncHandler( async(req, res, next) => {
@@ -61,6 +64,7 @@ export const updateTodoList = asyncHandler( async(req, res, next) => {
     }
  res.status(200).json({updateTodoList})
 })
+
 
 //Delete
 export const deleteTodoList = asyncHandler(async(req, res, next)=> {
