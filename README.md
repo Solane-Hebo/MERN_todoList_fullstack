@@ -2,7 +2,17 @@
   
 A fullstack Todo List application built with the MERN stack (MongoDB, Express.js, React, Node.js). This app allows users to manage their tasks efficiently with full CRUD operations and validations.
 
-FRONTED(REACT)
+## env Variables
+
+Skapa en .`.env` -fil i projektets rot med följande innehåll: 
+
+PORT=
+
+MONGO_URI=
+
+NODE_ENV=
+
+## FRONTED(REACT)
 
  Fetch Todos,
  Add Todos,
@@ -12,7 +22,7 @@ FRONTED(REACT)
  Visuao Status Indication and
  Prevent Deletion of Incomplete Todo
 
- Backend(Node.js + Express + MongoDB)
+## Backend(Node.js + Express + MongoDB)
  POST,
  GET,
  DELETE and
